@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* Paleta */
+:root {
+    --fundo-escuro: #2a1a14;
+    --fundo-medio: #3a241d;
+    --dourado: #e8c88b;
+    --laranja: #ff6a00;
+    --vermelho: #d43b00;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: var(--fundo-escuro);
+    color: var(--dourado);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 70vh;
+    background-image: url("images/fundo-fogo.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--laranja);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: var(--dourado);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, var(--laranja), var(--vermelho));
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    filter: brightness(1.25);
+}
+
+/* Conteúdo */
+.container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--laranja);
+    text-align: center;
+}
+
+/* Cardápio */
+.cardapio {
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.item {
+    background: var(--fundo-medio);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.item img:active {
+    transform: scale(1.25);
+}
+
+.preco {
+    color: var(--branco);
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--fundo-medio);
+}
